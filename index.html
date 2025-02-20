@@ -196,7 +196,7 @@
                 const mins = Math.floor(this.time / 60);
                 const secs = this.time % 60;
                 this.element.querySelector('.timer-display').textContent = 
-                    ${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')};
+                    `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
             }
 
             saveExercise() {
@@ -204,7 +204,7 @@
                 const calories = Math.round(this.exercise.caloriesPerMinute * (this.time / 60));
 
                 const exercise = {
-                    id: ${this.exercise.id}-${Date.now()},
+                    id: `${this.exercise.id}-${Date.now()}`,
                     name: this.exercise.name,
                     count: this.count,
                     duration: this.time,
